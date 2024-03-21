@@ -1,0 +1,39 @@
+Sitio web de Plástico - versión 2.0
+
+Para comenzar, decidí utilizar React como librería para controlar el front. Quise trabajar primero con la estructura, siguiendo el mapa de la página principal, pero con algunos cambios que me parecieron que aportaban mayor optimización. 
+
+Primero, no me pareció una buena idea el landing (la página previa al home) por lo que programé para que, al entrar al sitio ya se viera directamente el home principal y su menú. 
+
+El sitio web original tiene la siguiente estructura: 
+
+	- Landing (removido)
+	- Home: vista principal.
+		-Footer
+	- Artistic y Comercial
+		- Detalle de cada producción.
+	- Blog
+		- Detalle de nota de blog. 
+	- Quienes somos.
+	- Plastiverso (?)
+
+	- Administración
+		- Formulario de Publicaciones
+		- Edición de Publicaciones
+		- Mensajería
+
+El sitio web 2.0 tiene un mapa tal que así: 
+
+	- Home
+		- NavBar
+		- Footer
+	- Artistic y Comercial
+		- Detalle de cada producción.
+	- Blog
+		-Detalle de nota de blog.
+	- Staff
+
+	- Administracion
+		- Control del Home
+		- Formulario de Publicaciones
+		- Edición de Publicaciones
+		- Mensajería
