@@ -4,6 +4,11 @@
     src:url('../fonts/AgeoTrial-Light.ttf')
 }
 
+@font-face{
+    font-family: 'Ageo-regular';
+    src:url('../fonts/AgeoTrial-Regular.ttf')
+}
+
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
 
 
@@ -45,6 +50,9 @@
         background-color: rgb(20, 0, 0);
         border-bottom: 2vh solid #CA2E28 ;
       }
+    .searchBar{
+        display: none;
+    }
 }
 
 /* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
@@ -90,6 +98,23 @@
     border-bottom: 2vh solid #CA2E28 ;
     z-index: 1;
   }
+.searchBar{
+    display: block;
+    color:#CA2E28;
+    background-color: rgb(20, 0, 0);
+    border-color: #CA2E28;
+    margin-right: 2vh;
+    border-radius: 15px;
+    padding-left: 2vh;
+    font-family: 'Ageo-regular';
+    font-size: larger;
+}
+.searchBar::placeholder{
+    color:#CA2E28;
+    text-indent: 5px;
+    font-family: 'Ageo-regular';
+    font-size: large;
+}
 }
 
 /* FIN de los estilos para pantalla de escritorio (más de 400px de ancho) */

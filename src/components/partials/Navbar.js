@@ -33,6 +33,7 @@ export default function Navbar (){
                     </div>
                     : null
                 }
+                <input className="searchBar" placeholder=" ⌕ Buscar..."/>
             </div>
         </div>
     )

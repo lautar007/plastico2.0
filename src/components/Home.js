@@ -33,6 +33,7 @@ export default function Home (){
         <div className="Home">
             <h1 className="titulo">Plástico.</h1>
             <h4 className="subtitulo">Estudio fotográfico.</h4>
+            <input className="searchBarDesk" placeholder="⌕ Buscar..." />
             <hr/>
             <div className="position-posters">
                 <div className="art-content">
