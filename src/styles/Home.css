@@ -1,0 +1,219 @@
+/* Fuentes */
+@font-face{
+    font-family: 'Ageo-light';
+    src:url('../fonts/AgeoTrial-Light.ttf')
+}
+
+@font-face{
+    font-family: 'Ageo-regular';
+    src:url('../fonts/AgeoTrial-Regular.ttf')
+}
+
+@font-face{
+    font-family: 'Bigerside';
+    src:url('../fonts/BigersideExpanded-7O9Z4.otf')
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+
+@media (max-width: 499px){
+    hr{
+        height: 2vh;
+        background-color: rgb(20, 0, 0);
+        margin: 0;
+        border: solid rgb(20, 0, 0);
+    }
+    .Home{
+        background-color: white;
+    }
+    .titulo{
+        font-family: 'Ageo-regular';
+        margin: 0 0 0 2vh;
+    }
+    .subtitulo{
+        font-family: 'Ageo-light';
+        margin: 0 0 1vh 1vh;
+    }
+    .art-content{
+        position: relative;
+        height: 33vh;
+    }
+    .category-labelA{
+        position: absolute;
+        background-color: transparent;
+        text-decoration: none;
+        color:white;
+        top: 4vh;
+        margin: 0 2vw;
+        font-family: 'Bigerside';
+        -webkit-text-stroke: 0.5px rgb(20, 0, 0); /* Grosor y color del trazo en navegadores WebKit */
+        font-size: 6vh;
+        line-height: 0.7;
+    }
+    .category-labelA:hover{
+        text-shadow: -1px 2px 5px #A4A4A4;
+    }
+    .posterArtistico{
+        position: relative;
+        height: 33vh;
+        width: 90vw;
+        left: 10vw;
+        object-fit: cover;
+        object-position: left center;
+    }
+    .shadeIzq{
+        position: absolute;
+        object-fit: cover;
+        object-position: left;
+        left: 0vw;
+        height: 33vh;
+        width: 100vw;
+    }
+
+    .com-content{
+        position: relative;
+        height: 33vh;
+    }
+    .posterComercial{
+        position: relative;
+        height: 33vh;
+        width: 100vw;
+        object-fit: cover;
+        object-position: right center;
+    }
+    .shadeDer{
+        position: absolute;
+        object-fit: cover;
+        object-position: right;
+        right: 0vw;
+        height: 33vh;
+        width: 100vw;
+    }
+    .category-labelB{
+        position: absolute;
+        background-color: transparent;
+        text-decoration: none;
+        text-align: right;
+        color:white;
+        bottom: 4vh;
+        right: 0vh;
+        margin: 0 2vw;
+        font-family: 'Bigerside';
+        -webkit-text-stroke: 0.5px rgb(20, 0, 0); /* Grosor y color del trazo en navegadores WebKit */
+        font-size: 6vh;
+        line-height: 0.7;
+    }
+    .category-labelB:hover{
+        text-shadow: -1px 2px 5px #A4A4A4;
+    }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .position-posters{
+        display: flex;
+        flex-direction: row;
+    }
+    hr{
+        height: 2vh;
+        background-color: rgb(20, 0, 0);
+        margin: 0;
+        border: solid rgb(20, 0, 0);
+    }
+    .division-hr{
+        height: 79vh;
+        width: 1.5vw;
+    }
+    .Home{
+        background-color: white;
+    }
+    .titulo{
+        position: absolute;
+        top: -1vh;
+        left: 10vw;
+        color: white;
+        font-family: 'Ageo-regular';
+    }
+    .subtitulo{
+        position: absolute;
+        top: 4vh;
+        left: 10vw;
+        color: white;
+        font-family: 'Ageo-light';
+    }
+    .art-content{
+        position: relative;
+        height: 80vh;
+    }
+    .category-labelA{
+        position: absolute;
+        background-color: transparent;
+        text-decoration: none;
+        color:white;
+        top: 4vh;
+        margin: 0 2vw;
+        font-family: 'Bigerside';
+        -webkit-text-stroke: 0.5px rgb(20, 0, 0); /* Grosor y color del trazo en navegadores WebKit */
+        font-size: 10vh;
+        line-height: 0.7;
+    }
+    .category-labelA:hover{
+        text-shadow: -1px 2px 5px #A4A4A4;
+    }
+    .posterArtistico{
+        position: relative;
+        height: 80vh;
+        width: 49vw;
+        object-fit: cover;
+        object-position: left center;
+        border-radius: 5px;
+    }
+    .shadeIzq{
+        position: absolute;
+        object-fit: fill;
+        object-position: left;
+        left: 0vw;
+        height: 80vh;
+        width: 49vw;
+    }
+
+    .com-content{
+        position: relative;
+        height: 80vh;
+    }
+    .posterComercial{
+        position: relative;
+        height: 80vh;
+        width: 48vw;
+        object-fit: cover;
+        object-position: right center;
+    }
+    .shadeDer{
+        position: absolute;
+        object-fit: fill;
+        object-position: right;
+        right: 0vw;
+        height: 80vh;
+        width: 48vw;
+    }
+    .category-labelB{
+        position: absolute;
+        background-color: transparent;
+        text-decoration: none;
+        text-align: right;
+        color:white;
+        bottom: 4vh;
+        right: 0vh;
+        margin: 0 2vw;
+        font-family: 'Bigerside';
+        -webkit-text-stroke: 0.5px rgb(20, 0, 0); /* Grosor y color del trazo en navegadores WebKit */
+        font-size: 10vh;
+        line-height: 0.7;
+    }
+    .category-labelB:hover{
+        text-shadow: -1px 2px 5px #A4A4A4;
+    }
+}

@@ -1,0 +1,95 @@
+/* Fuentes */
+@font-face{
+    font-family: 'Ageo-light';
+    src:url('../fonts/AgeoTrial-Light.ttf')
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+
+@media (max-width: 499px){
+    .navBar{
+        background-color: rgb(20, 0, 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2vh solid #CA2E28 ;
+    }
+    .logo{
+        height: 12vh;
+        width: 12vh;
+        object-fit: cover;
+    }
+    .burger-menu {
+        height: 8vh;
+        width: 8vh;
+        margin-right: 7vw;
+    }
+    .link{
+        text-decoration: none;
+    }
+    .menu-label{
+        color: white;
+        font-family: 'Ageo-light';
+        font-size: 4vh;
+        margin: 25px 2vh;
+    }
+    .menu-div{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .menu-container {
+        position: absolute;
+        right: 12vh;
+        background-color: rgb(20, 0, 0);
+        border-bottom: 2vh solid #CA2E28 ;
+      }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+.navBar{
+    background-color: rgb(20, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2vh solid #CA2E28 ;
+}
+.logo{
+    height: 12vh;
+    width: 12vh;
+    object-fit: cover;
+    margin-left: 3vw;
+}
+.burger-menu {
+    height: 5vh;
+    width: 8vh;
+    margin-right: 3vw;
+}
+.link{
+    text-decoration: none;
+}
+.menu-label{
+    color: white;
+    font-family: 'Ageo-light';
+    font-size: 4vh;
+    margin: 25px 5vh;
+}
+.menu-div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.menu-container {
+    position: absolute;
+    right: 8vw;
+    background-color: rgb(20, 0, 0);
+    border-bottom: 2vh solid #CA2E28 ;
+    z-index: 1;
+  }
+}
+
+/* FIN de los estilos para pantalla de escritorio (más de 400px de ancho) */

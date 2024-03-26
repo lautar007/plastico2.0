@@ -37,3 +37,6 @@ El sitio web 2.0 tiene un mapa tal que así:
 		- Formulario de Publicaciones
 		- Edición de Publicaciones
 		- Mensajería
+
+
+La tipografía utilizada para los títulos principales (Artístico y Comercial) es: 
