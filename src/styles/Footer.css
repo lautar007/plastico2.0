@@ -15,7 +15,7 @@
     .footer-content{
         background-color: rgb(30 0 0);
     }
-    .social-label{
+    .footer-label{
         margin: 0;
         color: white;
         padding: 5vh 0 2vh 0;
@@ -23,6 +23,19 @@
         text-align: center;
         font-weight: 500;
         font-family: 'Ageo-regular';
+    }
+    .message-label{
+        padding: 1vh 3vh;
+        width: fit-content;
+        background-color: black;
+        color: white;
+        margin: 3vh auto;
+        font-size: 3vh;
+        text-align: center;
+        font-weight: 500;
+        font-family: 'Ageo-regular';
+        border-radius: 50px;
+        border: solid thin #CA2E28;
     }
     .social-content{
         display: flex;
@@ -32,5 +45,11 @@
     .social-logo{
         height: 25vw;
         margin-bottom: 2vh;
+    }
+    .credits{
+        color: rgb(187, 187, 187);
+        margin: 0 2vh;
+        font-size: 2vh;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 }

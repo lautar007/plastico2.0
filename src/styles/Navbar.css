@@ -49,6 +49,7 @@
         right: 12vh;
         background-color: rgb(20, 0, 0);
         border-bottom: 2vh solid #CA2E28 ;
+        z-index: 1;
       }
     .searchBar{
         display: none;
