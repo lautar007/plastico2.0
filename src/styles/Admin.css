@@ -1,0 +1,37 @@
+/* Fuentes */
+@font-face{
+    font-family: 'Ageo-light';
+    src:url('../fonts/AgeoTrial-Light.ttf')
+}
+
+@font-face{
+    font-family: 'Ageo-regular';
+    src:url('../fonts/AgeoTrial-Regular.ttf')
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+@media (max-width: 499px){
+    .admin-content{
+        background-color: rgb(30 0 0);
+        height: 86vh;
+    }
+    .admin-title{
+        color: white;
+        margin: 0;
+        padding: 2vh 5vw;
+        font-family: 'Ageo-regular';
+    }
+    .pass-content{
+        margin: 2vh 0;
+        padding: 2vh 0;
+        position:absolute;
+        background-color: black;
+    }
+    .pass-label{
+        color: white;
+        font-family: 'Ageo-regular';
+        margin: 0 2vh;
+        font-size: 10pw;
+    }
+}
