@@ -46,6 +46,69 @@
         height: 25vw;
         margin-bottom: 2vh;
     }
+    .credits-content{
+        background-color: rgb(30 0 0);
+    }
+    .credits{
+        color: rgb(187, 187, 187);
+        margin: 0 2vh;
+        font-size: 2vh;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .hr-footer{
+        width: 1.5vw;
+        height: inherit;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(30 0 0);
+        height: 24vh;
+    }
+    .footer-label{
+        margin: 0;
+        color: white;
+        padding: 5vh 0 2vh 0;
+        font-size: 3vh;
+        text-align: center;
+        font-weight: 500;
+        font-family: 'Ageo-regular';
+    }
+    .message-label{
+        padding: 1vh 3vh;
+        width: 10vw;
+        background-color: black;
+        color: white;
+        margin: 6.5vh auto;
+        font-size: 3vh;
+        text-align: center;
+        font-weight: 500;
+        font-family: 'Ageo-regular';
+        border-radius: 50px;
+        border: solid thin #CA2E28;
+    }
+    .social-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .social-logo{
+        height: 6vw;
+        margin-bottom: 2vh;
+        margin-left: 1vw;
+    }
+    .credits-content{
+        border-top: solid 2vh rgb(20 0 0);
+        background-color: rgb(30 0 0);
+        
+    }
     .credits{
         color: rgb(187, 187, 187);
         margin: 0 2vh;
