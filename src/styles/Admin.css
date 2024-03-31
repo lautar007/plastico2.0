@@ -23,15 +23,40 @@
         font-family: 'Ageo-regular';
     }
     .pass-content{
+        display: flex;
+        flex-direction: column;
         margin: 2vh 0;
         padding: 2vh 0;
         position:absolute;
         background-color: black;
+        width: 100vw;
     }
     .pass-label{
         color: white;
         font-family: 'Ageo-regular';
         margin: 0 2vh;
-        font-size: 10pw;
+        font-size: 6vw;
+    }
+    .pass-input{
+        color:#CA2E28;
+        background-color: rgb(20, 0, 0);
+        border-color: #CA2E28;
+        margin: 3vh auto;
+        border-radius: 15px;
+        font-family: 'Ageo-regular';
+        font-size: larger;
+        width: 45vw;
+        object-position: center;
+    }
+    .pass-button{
+        margin: 0 auto;
+        width: 45vw;
+        color: white;
+        background-color: black;
+        border: solid thin #CA2E28;
+        border-radius: 15px;
+        font-family: 'Ageo-regular';
+        font-size: 6vw;
+        padding-bottom: 1vh;
     }
 }
