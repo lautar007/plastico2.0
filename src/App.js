@@ -7,6 +7,10 @@ import Staff from './components/Staff';
 import Administracion from './components/Admin';
 import Navbar from './components/partials/Navbar';
 import Footer from './components/partials/Footer';
+import PostForm from './components/PostForm';
+import EditPorts from './components/EditPort';
+import EditPosts from './components/Editpost';
+import Mensajeria from './components/Mensajeria';
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <Route exact path='/blog' element = {<div><Blog/></div>}/>
           <Route exact path='/staff' element = {<div><Staff/></div>}/>
           <Route exact path='/admin' element = {<div><Navbar/><Administracion/></div>}/>
+          <Route exact path='/postForm' element = {<div><Navbar/><PostForm/></div>}/>
+          <Route exact path='/editPorts' element = {<div><Navbar/><EditPorts/></div>}/>
+          <Route exact path='/editPosts' element = {<div><Navbar/><EditPosts/></div>}/>
+          <Route exact path='/mensajeria' element = {<div><Navbar/><Mensajeria/></div>}/>
         </Routes>
       </div>
     </BrowserRouter>
