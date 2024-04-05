@@ -61,6 +61,44 @@
         font-size: 6vw;
         padding-bottom: 1vh;
     }
+    .titulo-admin{
+        color: white;
+        font-family: 'Ageo-regular';
+        padding-top: 2vh;
+        margin: 0 2vh;
+        font-size: 3vh;
+    }
+    .tipo-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2vh;
+    }
+    .tipo-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tipo-box{
+        height: 4vh;
+        width: 4vh;
+    }
+    .tipo-label{
+        color: white;
+        font-family: 'Ageo-regular';
+        font-size: 2vh;
+    }
+    .form-label{
+        color: white;
+        font-family: "Ageo-regular";
+        margin: 1vh 2vh;
+    }
+    .form-input{
+        margin: 0 2vh;
+        width: 75vw;
+        font-size: 2vh;
+        text-align: center;
+    }
 }
 
 /* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
