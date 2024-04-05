@@ -1,25 +1,92 @@
 import React, { useState } from "react";
 
 export default function PostForm(){
-
+     
+    //Autorización:
     const staffAutho = sessionStorage.getItem("staffAutho");
+    //Manejador del tipo de posteo:
     const [tipo, setTipo] = useState("work");
+    //Manejador de la categoría de los trabajos:
     const [category, setCategory] = useState("art");
+    //Arreglo de imágenes para la galería.
+    const [galeria, setGaleria] = useState([""]);
 
-     // Redireccionamiento condicional fuera del bloque de renderizado
+    //Objeto a postear:
+    let newPost = {
+        titulo: "",
+        fecha: "",
+        imagen: "",
+        contenido: "",
+        categoria: "",
+        subtitulo: "",
+        galeria: []
+    };
+
+     // Redireccionamiento en caso de no autorización.
      if (staffAutho !== 'Y') {
         window.location.href = "/admin";
         return null; // No renderizar nada más
     }
 
+    //Función que maneja los checkbox del tipo de posteo
     function handleTipoBox (e){
         setTipo(e.target.value);
         console.log(tipo);
     }
 
+    //Función que maneja los checkbox de la categoría de trabajo.
     function handleCategoryBox(e){
         setCategory(e.target.value);
         console.log(category);
+    }
+
+    //Función que agrega un input a la sección galerías:
+    const handleAddInputGallery = () => {
+        setGaleria([...galeria, '']);
+      };
+
+    //Función que elimina un input de la sección galerías:
+    const handleRemoveInputGallery = (index) => {
+        const newGaleria = [...galeria];
+        newGaleria.splice(index, 1);
+        setGaleria(newGaleria);
+      };
+
+    //Función que coloca el valor de los inputs al arreglo galerías:
+    const handleInputChangeGallery = (index, e) => {
+        const newGaleria = [...galeria];
+        newGaleria[index] = e.target.value;
+        setGaleria(newGaleria);
+        newPost.galeria = galeria;
+      };
+
+    //Función para crear el objeto a postear:
+    function handleNewPost(e){
+        if(e.target.name === "titulo"){
+            newPost.titulo = e.target.value;
+            console.log(newPost)
+        }
+        else if(e.target.name === "subtitulo"){
+            newPost.subtitulo = e.target.value;
+            console.log(newPost)
+        }
+        else if(e.target.name === "fecha"){
+            newPost.fecha = e.target.value
+            console.log(newPost)
+        }
+        else if(e.target.name === "imagen"){
+            newPost.imagen = e.target.value
+            console.log(newPost)
+        }
+        else if(e.target.name === "contenido"){
+            newPost.contenido = e.target.value
+            console.log(newPost)
+        }
+    }
+
+    //Función para enviar el post
+    function handleSendPost(e){
+        console.log(newPost)
     }
 
     return(
@@ -80,6 +147,8 @@ export default function PostForm(){
                             <input
                             placeholder="Título del post"
                             className="form-input"
+                            name="titulo"
+                            onChange={handleNewPost}
                             />
 
                             <h3 className="form-label">Subtítulo</h3>
@@ -87,18 +156,24 @@ export default function PostForm(){
                             type="text-area"
                             placeholder="Subtítulo del post"
                             className="form-input"
+                            name="subtitulo"
+                            onChange={handleNewPost}
                             />
 
                             <h3 className="form-label">Fecha</h3>
                             <input
                             type="date"
                             className="form-input"
+                            name="fecha"
+                            onChange={handleNewPost}
                             />
 
                             <h3 className="form-label">Portada</h3>
                             <input
                             placeholder="URL de la imagen"
                             className="form-input"
+                            name="imagen"
+                            onChange={handleNewPost}
                             />
 
                             <h3 className="form-label">Contenido</h3>
@@ -106,11 +181,32 @@ export default function PostForm(){
                             type="text-area"
                             placeholder="Contenido del post"
                             className="form-input"
+                            name="contenido"
+                            onChange={handleNewPost}
                             />
+
+                            <div className="galeria-content">
+                                <h3 className="form-label">Galería</h3>
+                                {galeria.map((image, index) => (
+                                    <div key={index}>
+                                        <input
+                                            type="text"
+                                            className="form-input"
+                                            value={image}
+                                            placeholder="URL de la imagen"
+                                            onChange={(e) => handleInputChangeGallery(index, e)}
+                                        />
+                                        <button className="galeria-button-men" onClick={() => handleRemoveInputGallery(index)}>✖</button>
+                                    </div>
+                                ))}
+                                <button className="galeria-button-mas" onClick={handleAddInputGallery}>✚</button>
+                            </div>
+                            <button className="send-button" onClick={handleSendPost}>Postear.</button>
                         </div>
                     </div>
                     :
                     <div>
+                        <h3 className="form-label"> El formulario para blog está en desarrollo </h3>
                     </div>
                 }
             </div>

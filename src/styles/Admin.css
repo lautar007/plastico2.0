@@ -14,7 +14,7 @@
 @media (max-width: 499px){
     .admin-content{
         background-color: rgb(30 0 0);
-        height: 86vh;
+        height: 100%;
     }
     .admin-title{
         color: white;
@@ -98,6 +98,37 @@
         width: 75vw;
         font-size: 2vh;
         text-align: center;
+    }
+    .galeria-content{
+        background-color: rgb(30, 0, 0);
+    }
+    .galeria-button-men{
+        background-color: black;
+        color: white;
+        border: thin solid #CA2E28;
+        font-family: "Ageo-regular";
+        font-size: 3vh;
+        border-radius: 25px;
+    }
+    .galeria-button-mas{
+        background-color: black;
+        color: white;
+        border: thin solid #ca2828;
+        font-family: "Ageo-regular";
+        font-size: 3vh;
+        height: fit-content;
+        margin: 2vh 2vh 4vh 2vh;
+        border-radius: 25px;
+    }
+    .send-button{
+        background-color: black;
+        color: white;
+        border: thin solid #56ca28;
+        font-family: "Ageo-regular";
+        font-size: 4vh;
+        margin: 0vh 2vh 4vh 2vh;
+        padding: 1vh 3vh;
+        border-radius: 25px;
     }
 }
 
