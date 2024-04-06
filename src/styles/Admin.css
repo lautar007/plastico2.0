@@ -117,7 +117,7 @@
         font-family: "Ageo-regular";
         font-size: 3vh;
         height: fit-content;
-        margin: 2vh 2vh 4vh 2vh;
+        margin: 0vh 2vh;
         border-radius: 25px;
     }
     .send-button{
@@ -126,9 +126,24 @@
         border: thin solid #56ca28;
         font-family: "Ageo-regular";
         font-size: 4vh;
-        margin: 0vh 2vh 4vh 2vh;
+        margin: 2vh 2vh 4vh 2vh;
         padding: 1vh 3vh;
         border-radius: 25px;
+    }
+    .thumbnail-content{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+    }
+    .thumbnail{
+        color: white;
+        font-family: "Ageo-light";
+        width: 15vh;
+        height: 15vh;
+        margin: 3vh 1vh;
+        object-fit:contain;
+        border-radius: 40px;
+        background-color: black;
     }
 }
 

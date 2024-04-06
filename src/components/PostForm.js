@@ -9,10 +9,10 @@ export default function PostForm(){
     //Manejador de la categoría de los trabajos:
     const [category, setCategory] = useState("art");
     //Arreglo de imágenes para la galería.
-    const [galeria, setGaleria] = useState([""]);
+    const [galeria, setGaleria] = useState([]);
 
     //Objeto a postear:
-    let newPost = {
+    let [newPost, setNewPost] = useState({
         titulo: "",
         fecha: "",
         imagen: "",
@@ -20,7 +20,7 @@ export default function PostForm(){
         categoria: "",
         subtitulo: "",
         galeria: []
-    };
+    });
 
      // Redireccionamiento en caso de no autorización.
      if (staffAutho !== 'Y') {
@@ -63,30 +63,78 @@ export default function PostForm(){
     //Función para crear el objeto a postear:
     function handleNewPost(e){
         if(e.target.name === "titulo"){
-            newPost.titulo = e.target.value;
+            setNewPost({
+                ...newPost,
+                titulo: e.target.value
+            })
             console.log(newPost)
         }
         else if(e.target.name === "subtitulo"){
-            newPost.subtitulo = e.target.value;
+            setNewPost({
+                ...newPost,
+                subtitulo: e.target.value
+            })
             console.log(newPost)
         }
         else if(e.target.name === "fecha"){
-            newPost.fecha = e.target.value
+            setNewPost({
+                ...newPost,
+                fecha: e.target.value
+            })
             console.log(newPost)
         }
         else if(e.target.name === "imagen"){
-            newPost.imagen = e.target.value
+            setNewPost({
+                ...newPost,
+                imagen: e.target.value
+            })
             console.log(newPost)
         }
         else if(e.target.name === "contenido"){
-            newPost.contenido = e.target.value
+            setNewPost({
+                ...newPost,
+                contenido: e.target.value
+            })
             console.log(newPost)
         }
     }
 
     //Función para enviar el post
-    function handleSendPost(e){
+    async function handleSendPost(e){
+        setNewPost({
+            ...newPost,
+            categoria: category,
+            galeria: galeria
+        })
         console.log(newPost)
+        try {
+            let opciones = {
+                method: 'POST', // Método de la solicitud
+                headers: {
+                    'Content-Type': 'application/json' // Tipo de contenido que se está enviando (en este caso JSON)
+                },
+                body: JSON.stringify(newPost) // Convertir los datos a formato JSON y enviarlos en el cuerpo de la solicitud
+            };
+            if(category === "art" && tipo === "work"){
+            let response = await fetch('https://plasticoapi.onrender.com/artistic', opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post artístico creado con éxito.")
+            }
+            else if (category === "com" && tipo === "work"){
+                let response = await fetch('https://plasticoapi.onrender.com/comercial', opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post comercial creado con éxito.")
+            }
+        } catch (error) {
+            alert("Hubo un error. LLamen a Lauchita");
+            console.log(error);
+        }
     }
 
     return(
@@ -175,6 +223,14 @@ export default function PostForm(){
                             name="imagen"
                             onChange={handleNewPost}
                             />
+                            {
+                                newPost.imagen ?
+                                <div>
+                                    <img className="thumbnail" src={newPost.imagen} alt="URL INVALIDA."/>
+                                </div>
+                                :
+                                null
+                            }
 
                             <h3 className="form-label">Contenido</h3>
                             <textarea
@@ -200,6 +256,13 @@ export default function PostForm(){
                                     </div>
                                 ))}
                                 <button className="galeria-button-mas" onClick={handleAddInputGallery}>✚</button>
+                                <div className="thumbnail-content">
+                                {
+                                    galeria.map(image =>(
+                                        <img className="thumbnail" src={image} alt="URL INVALIDA. Al colocar una URL válida la imagen aparecerá aquí." />
+                                    ))
+                                }
+                                </div>
                             </div>
                             <button className="send-button" onClick={handleSendPost}>Postear.</button>
                         </div>
