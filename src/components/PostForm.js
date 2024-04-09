@@ -165,7 +165,7 @@ export default function PostForm(){
             <div>
                 {
                     tipo === "work" ?
-                    <div>
+                    <div className="form-content">
                         <h1 className="titulo-admin">Nuevo Trabajo.</h1>
                         <h3 className="form-label">Categoría</h3>
                         <div className="tipo-content">
@@ -225,7 +225,7 @@ export default function PostForm(){
                             />
                             {
                                 newPost.imagen ?
-                                <div>
+                                <div className="poster-thumb-div">
                                     <img className="thumbnail" src={newPost.imagen} alt="URL INVALIDA."/>
                                 </div>
                                 :

@@ -61,6 +61,8 @@
         font-size: 6vw;
         padding-bottom: 1vh;
     }
+
+    /* INICIO de Estilos del POSTFORM */
     .titulo-admin{
         color: white;
         font-family: 'Ageo-regular';
@@ -145,6 +147,7 @@
         border-radius: 40px;
         background-color: black;
     }
+    /* INICIO de Estilos del POSTFORM */
 }
 
 /* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
@@ -152,8 +155,11 @@
 
 @media (min-width: 499px){
     .admin-content{
+        display: flex;
+        flex-direction: column;
         background-color: rgb(30 0 0);
-        height: 86vh;
+        height: fit-content;
+        align-items: center;
     }
     .admin-title{
         color: white;
@@ -204,4 +210,106 @@
     .pass-button:hover{
         background-color: rgb(40, 0, 0);
     }
+
+    /* INICIO de Estilos del POSTFORM */
+    .titulo-admin{
+        color: white;
+        font-family: 'Ageo-regular';
+        padding-top: 2vh;
+        margin: 0 2vh;
+        font-size: 4vh;
+    }
+    .tipo-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2vh;
+        width: 50vw;
+    }
+    .tipo-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tipo-box{
+        height: 4vh;
+        width: 4vh;
+    }
+    .tipo-label{
+        color: white;
+        font-family: 'Ageo-regular';
+        font-size: 2vh;
+    }
+    .form-content{
+        background-color: rgb(20, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2vh;
+        border-radius: 25px;
+    }
+    .form-label{
+        color: white;
+        font-family: "Ageo-regular";
+        margin: 1vh 2vh;
+    }
+    .form-input{
+        margin: 0 2vh;
+        width: 50vw;
+        font-size: 2vh;
+        text-align: center;
+    }
+    .galeria-content{
+        background-color: rgb(20, 0, 0);
+    }
+    .galeria-button-men{
+        background-color: black;
+        color: white;
+        border: thin solid #CA2E28;
+        font-family: "Ageo-regular";
+        font-size: 3vh;
+        border-radius: 25px;
+    }
+    .galeria-button-mas{
+        background-color: black;
+        color: white;
+        border: thin solid #ca2828;
+        font-family: "Ageo-regular";
+        font-size: 3vh;
+        height: fit-content;
+        margin: 0vh 2vh;
+        border-radius: 25px;
+    }
+    .send-button{
+        background-color: black;
+        color: white;
+        border: thin solid #56ca28;
+        font-family: "Ageo-regular";
+        font-size: 4vh;
+        margin: 2vh 2vh 4vh 2vh;
+        padding: 1vh 3vh;
+        border-radius: 25px;
+    }
+    .thumbnail-content{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 50vw;
+        justify-content: space-evenly;
+    }
+    .poster-thumb-div{
+        display: flex;
+        width: 50vw;
+        justify-content: center;
+    }
+    .thumbnail{
+        color: white;
+        font-family: "Ageo-light";
+        width: 15vh;
+        height: 15vh;
+        margin: 3vh 1vh;
+        object-fit:contain;
+        border-radius: 40px;
+        background-color: black;
+    }
+    /* INICIO de Estilos del POSTFORM */
 }
