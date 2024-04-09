@@ -1,0 +1,108 @@
+/* Fuentes */
+@font-face{
+    font-family: 'Ageo-light';
+    src:url('../fonts/AgeoTrial-Light.ttf')
+}
+
+@font-face{
+    font-family: 'Ageo-regular';
+    src:url('../fonts/AgeoTrial-Regular.ttf')
+}
+
+/* Animación de HR */
+@keyframes animatedHR-red {
+    0%{
+        width: 0vw;
+        margin-left: 100%;
+    }
+    100%{
+        width: 100vw;
+        margin-left: 0%;
+    }
+}
+
+@keyframes animatedHR-black {
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 100vw;
+    }
+}
+
+@keyframes animatedIMG{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes animatedTitle{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 85%;
+    }
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+@media (max-width: 499px){
+    .work-menu-content{
+        background-color: rgb(30,0,0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-menu-title{
+        color: white;
+        margin: 0;
+        padding: 2vh 0 2vh 2vh;
+        font-family: 'Ageo-regular';
+    }
+    .post-content{
+        background-color: white;
+        position: relative;
+    }
+    .post-img{
+        margin:0;
+        width: 100vw;
+        height: 40vh;
+        opacity: 0%;
+        object-fit: cover;
+        vertical-align: top;
+        animation: animatedIMG 3s ease forwards;
+        animation-delay: 3s;
+    }
+    .post-title{
+        position: absolute;
+        opacity: 0;
+        margin: 0;
+        bottom: 2.9vh;
+        width: 100vw;
+        background-color: rgb(30,0,0);
+        color: white;
+        font-family: 'Ageo-light';
+        padding: 1vh 2vh;
+        z-index: 1;
+        animation: animatedTitle 3s ease forwards;
+        animation-delay: 3s;
+    }
+    .black-band{
+        background-color: black;
+        height: 1.5vh;
+        width: 0;
+        border: none;
+        animation: animatedHR-black 3s ease forwards;
+    }
+    .red-band{
+        background-color: #CA2E28;
+        height: 1.5vh;
+        width: 0;
+        border: none;
+        animation: animatedHR-red 3s ease forwards;
+    }
+}
