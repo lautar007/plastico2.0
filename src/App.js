@@ -11,7 +11,7 @@ import PostForm from './components/PostForm';
 import EditPorts from './components/EditPort';
 import EditPosts from './components/Editpost';
 import Mensajeria from './components/Mensajeria';
-import PostDetail from './components/PostDetail';
+import PostDetailArt from './components/PostDetailArt';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route exact path='/editPorts' element = {<div><Navbar/><EditPorts/></div>}/>
           <Route exact path='/editPosts' element = {<div><Navbar/><EditPosts/></div>}/>
           <Route exact path='/mensajeria' element = {<div><Navbar/><Mensajeria/></div>}/>
-          <Route exact path='/work/:id' element = {<div><Navbar/><PostDetail/><Footer/></div>}/>
+          <Route exact path='/workArt/:id' element = {<div><Navbar/><PostDetailArt/><Footer/></div>}/>
         </Routes>
       </div>
     </BrowserRouter>

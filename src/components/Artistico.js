@@ -20,7 +20,6 @@ export default function Artistico (){
             };
         }
         fetchPostList();
-        console.log(postList)
     }, );
 
     return(
@@ -32,7 +31,7 @@ export default function Artistico (){
                         return(
                             <div key={index} className="post-content">
                                 <hr className="red-band"/> 
-                                <Link to={"/work/"+ post._id}>
+                                <Link to={"/workArt/"+ post._id}>
                                     <img 
                                     className="post-img"
                                     src={post.imagen}

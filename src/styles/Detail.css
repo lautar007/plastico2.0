@@ -1,0 +1,51 @@
+/* Fuentes */
+
+@font-face{
+    font-family: 'Just-sans';
+    src:url('../fonts/JUST\ Sans\ Regular.otf')
+}
+
+@font-face{
+    font-family: 'Pompadour';
+    src:url('../fonts/02_APompadourTextSample.ttf')
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+@media (max-width: 499px){
+    .detail-title{
+        background-color: rgb(30, 0, 0);
+        margin: 0;
+        color: white;
+        padding: 2vh 0;
+        text-align: center;
+        font-family: 'Just-sans';
+    }
+    .detail-image{
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+        vertical-align: top;
+    }
+    .detail-subtitle{
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 2vh 0;
+        font-family: 'Just-sans';
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .detail-body{
+        padding: 0 2vh;
+        font-family: 'Pompadour';
+        font-size: 2.8vh;
+        line-height: 1.2;
+    }
+
+    .detail-date{
+        padding: 0 0 2vh 2vh;
+        margin: 0;
+    }
+}
