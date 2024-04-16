@@ -24,24 +24,26 @@ export default function Artistico (){
     }, []);
 
     return(
-        <div className="work-menu-content">
-            <h1 className="work-menu-title">Trabajos Comerciales.</h1>
-            {
-                postList.map((post, index)=>{
-                    return(
-                        <div key={index} className="post-content">
-                            <hr className="red-band"/> 
-                            <img 
-                            className="post-img"
-                            src={post.imagen}
-                            />
-                            <p className="post-title">{post.titulo}</p>
-                            <hr className="red-band"/>
-                            <hr className="black-band"/> 
-                        </div>
-                    )
-                })
-            }
+        <div>
+            <h1 className="work-menu-title">Trabajos Artísticos.</h1>
+            <div className="work-menu-content">
+                {
+                    postList.map((post, index)=>{
+                        return(
+                            <div key={index} className="post-content">
+                                <hr className="red-band"/> 
+                                <img 
+                                className="post-img"
+                                src={post.imagen}
+                                />
+                                <p className="post-title">{post.titulo}</p>
+                                <hr className="red-band"/>
+                                <hr className="black-band"/> 
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

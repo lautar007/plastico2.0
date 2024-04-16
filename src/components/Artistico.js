@@ -21,27 +21,32 @@ export default function Artistico (){
         }
         fetchPostList();
         console.log(postList)
-    }, []);
+    }, );
 
     return(
-        <div className="work-menu-content">
+        <div>
             <h1 className="work-menu-title">Trabajos Artísticos.</h1>
-            {
-                postList.map((post, index)=>{
-                    return(
-                        <div key={index} className="post-content">
-                            <hr className="red-band"/> 
-                            <img 
-                            className="post-img"
-                            src={post.imagen}
-                            />
-                            <p className="post-title">{post.titulo}</p>
-                            <hr className="red-band"/>
-                            <hr className="black-band"/> 
-                        </div>
-                    )
-                })
-            }
+            <div className="work-menu-content">
+                {
+                    postList.map((post, index)=>{
+                        return(
+                            <div key={index} className="post-content">
+                                <hr className="red-band"/> 
+                                <Link to={"/work/"+ post._id}>
+                                    <img 
+                                    className="post-img"
+                                    src={post.imagen}
+                                    alt="Work"
+                                    />
+                                    <p className="post-title">{post.titulo}</p>
+                                </Link>
+                                <hr className="red-band"/>
+                                <hr className="black-band"/> 
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

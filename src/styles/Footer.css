@@ -12,6 +12,9 @@
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
 
 @media (max-width: 499px){
+    .separator-footer{
+        display: none;
+    }
     .footer-content{
         background-color: rgb(30 0 0);
     }
@@ -61,6 +64,9 @@
 /* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
 
 @media (min-width: 499px){
+    .separator-footer{
+        background-color: black;
+    }
     .hr-footer{
         width: 1.5vw;
         height: inherit;

@@ -9,6 +9,7 @@ import whatsapp from "../../images/whatsapp.png";
 export default function Footer (){
     return(
         <div>
+           <hr className="separator-footer"/> 
             <div className="footer-content">
                 <hr className="hr-footer"/>
                 <div>

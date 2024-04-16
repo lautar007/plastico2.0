@@ -9,14 +9,19 @@
     src:url('../fonts/AgeoTrial-Regular.ttf')
 }
 
-/* Animación de HR */
+@font-face{
+    font-family: 'Just-sans';
+    src:url('../fonts/JUST\ Sans\ Regular.otf')
+}
+
+/* Animaciones*/
 @keyframes animatedHR-red {
     0%{
         width: 0vw;
         margin-left: 100%;
     }
     100%{
-        width: 100vw;
+        width: 100%;
         margin-left: 0%;
     }
 }
@@ -48,6 +53,7 @@
     }
 }
 
+
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
 
 @media (max-width: 499px){
@@ -62,6 +68,9 @@
         margin: 0;
         padding: 2vh 0 2vh 2vh;
         font-family: 'Ageo-regular';
+        background-color: rgb(30,0,0);
+        text-align: center;
+        font-size: 4vh;
     }
     .post-content{
         background-color: white;
@@ -82,11 +91,11 @@
         opacity: 0;
         margin: 0;
         bottom: 2.9vh;
-        width: 100vw;
+        width: 96vw;
         background-color: rgb(30,0,0);
         color: white;
-        font-family: 'Ageo-light';
-        padding: 1vh 2vh;
+        font-family: 'Just-sans';
+        padding: 1vh 0 1vh 2vh;
         z-index: 1;
         animation: animatedTitle 3s ease forwards;
         animation-delay: 3s;
@@ -102,6 +111,65 @@
         background-color: #CA2E28;
         height: 1.5vh;
         width: 0;
+        border: none;
+        animation: animatedHR-red 3s ease forwards;
+    }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .work-menu-content{
+        background-color: rgb(30,0,0);
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        padding-bottom: 2vh;
+    }
+    .work-menu-title{
+        color: white;
+        margin: 0;
+        padding: 2vh 0 2vh 2vh;
+        font-family: 'Ageo-regular';
+        background-color: rgb(30,0,0);
+        text-align: center;
+        font-size: 4vh;
+    }
+    .post-content{
+        background-color: white;
+        position: relative;
+    }
+    .post-img{
+        margin:0;
+        width: 30vw;
+        height: 40vh;
+        opacity: 0%;
+        object-fit: cover;
+        vertical-align: top;
+        animation: animatedIMG 3s ease forwards;
+        animation-delay: 3s;
+    }
+    .post-title{
+        position: absolute;
+        opacity: 0;
+        margin: 0;
+        bottom: 2.9vh;
+        width: 30vw;
+        background-color: rgb(30,0,0);
+        color: white;
+        font-family: 'Just-sans';
+        padding: 1vh 0 1vh 2vh;
+        z-index: 1;
+        animation: animatedTitle 3s ease forwards;
+    }
+    .black-band{
+        display: none;
+    }
+    .red-band{
+        background-color: #CA2E28;
+        height: 1.5vh;
+        width: 100%;
         border: none;
         animation: animatedHR-red 3s ease forwards;
     }
