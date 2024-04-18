@@ -31,11 +31,13 @@ export default function Artistico (){
                     postList.map((post, index)=>{
                         return(
                             <div key={index} className="post-content">
-                                <hr className="red-band"/> 
-                                <img 
-                                className="post-img"
-                                src={post.imagen}
-                                />
+                                <hr className="red-band"/>
+                                <Link to={"/workCom/"+ post._id}>
+                                    <img 
+                                    className="post-img"
+                                    src={post.imagen}
+                                    />
+                                </Link> 
                                 <p className="post-title">{post.titulo}</p>
                                 <hr className="red-band"/>
                                 <hr className="black-band"/> 

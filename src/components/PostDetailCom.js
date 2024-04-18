@@ -13,7 +13,7 @@ export default function PostDetailArt(){
     useEffect(()=>{
         const fetchPost = async () =>{
             try {
-                const postArt = await fetch('https://plasticoapi.onrender.com/artistic/'+id);
+                const postArt = await fetch('https://plasticoapi.onrender.com/comercial/'+id);
                 if(!postArt.ok){
                     throw new Error('Error al obtener los posters')
                 }

@@ -6,8 +6,8 @@
 }
 
 @font-face{
-    font-family: 'Pompadour';
-    src:url('../fonts/02_APompadourTextSample.ttf')
+    font-family: 'Infinity';
+    src:url('../fonts/MADEINFINITYPersonalUse-Light.otf')
 }
 
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
@@ -22,6 +22,8 @@
         font-family: 'Just-sans';
     }
     .detail-image{
+        border-top: solid 1vh #CA2E28;
+        border-bottom: solid 1vh #CA2E28;
         width: 100%;
         height: fit-content;
         object-fit: cover;
@@ -39,7 +41,7 @@
 
     .detail-body{
         padding: 0 2vh;
-        font-family: 'Pompadour';
+        font-family: 'Infinity';
         font-size: 2.8vh;
         line-height: 1.2;
     }
@@ -47,5 +49,98 @@
     .detail-date{
         padding: 0 0 2vh 2vh;
         margin: 0;
+    }
+    .detail-galery{
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+        vertical-align: top;
+        border-top: solid 2vh rgb(30, 0, 0)
+    }
+    .call-to-action{
+        width: 10vh;
+        height: 10vh;
+        background-color: #CA2E28;
+        border-radius: 20px;
+        border: solid 3px #CA2E28;
+        position: fixed; /* Posición fija */
+        bottom: 5vh; /* Distancia desde el borde inferior */
+        right: 2vh; /* Distancia desde el borde derecho */
+    }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .detail-content{
+        display: flex;
+        flex-direction: row;
+    }
+    .detail-title{
+        background-color: rgb(30, 0, 0);
+        margin: 0;
+        color: white;
+        padding: 2vh 0;
+        text-align: center;
+        font-family: 'Just-sans';
+        border-bottom: solid 1vh #CA2E28;
+    }
+    .detail-image{
+        width: 38vw;
+        height: 38vw;
+        object-fit: cover;
+        vertical-align: top;
+        border: solid 1vw black;
+    }
+    .detail-subtitle{
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 2vh 0;
+        font-family: 'Just-sans';
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .detail-body{
+        padding: 0 2vh;
+        font-family: 'Infinity';
+        font-size: 2.8vh;
+        line-height: 1.2;
+    }
+
+    .detail-date{
+        padding: 0 0 2vh 2vh;
+        margin: 0;
+    }
+    .detail-galcont{
+        border-top: solid 2vh rgb(30, 0, 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: rgb(30, 0, 0);
+        justify-content: space-around;
+    }
+    .detail-galery{
+        width: fit-content;
+        height: fit-content;
+        object-fit: cover;
+        vertical-align: top;
+        border: solid 1vh black;
+    }
+    .detail-galhr{
+        display: none;
+    }
+    .call-to-action{
+        width: 10vh;
+        height: 10vh;
+        background-color: #CA2E28;
+        border-radius: 20px;
+        border: solid 3px #CA2E28;
+        position: fixed; /* Posición fija */
+        bottom: 5vh; /* Distancia desde el borde inferior */
+        right: 2vh; /* Distancia desde el borde derecho */
     }
 }
