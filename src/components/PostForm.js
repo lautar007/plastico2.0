@@ -104,7 +104,7 @@ export default function PostForm(){
         setNewPost({
             ...newPost,
             categoria: category,
-            galeria: galeria
+            galeria: galeria,
         })
         console.log(newPost)
         try {

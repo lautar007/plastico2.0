@@ -48,9 +48,103 @@ export default function EditForm (){
         console.log(post);
     }, []);
 
-    function handlePut(e){
-        console.log(post)
+    let galeria = post.galeria;
+
+    //Función para agregar un nuevo input al formulario de galería: 
+    const handleAddInputGallery = (e) => {
+        console.log("Agregando un nuevo input")
+        galeria.push('');
+        setPost({
+            ...post,
+            gelaria: galeria
+        })
+      };
+
+    //Función para eliminar un input de la galería:
+    function handleRemoveInputGallery(e){
+        galeria.splice(e.target.value, 1);
+        setPost({
+            ...post,
+            gelaria: galeria
+        });
     }
+
+    //Funciones para cambiar los valores de las propiedades del post: 
+    function handleInput(e){
+        switch (e.target.name) {
+            case "titulo":
+                console.log("Cambiando título")
+                setPost({
+                    ...post,
+                    titulo: e.target.value
+                })
+                break;
+            case "subtitulo":
+                console.log("Cambiando subtítulo")
+                setPost({
+                    ...post,
+                    subtitulo: e.target.value
+                })
+                break;
+            case "imagen":
+                console.log("Cambiando imagen de portada")
+                setPost({
+                    ...post,
+                    imagen: e.target.value
+                })
+                break;
+            case "contenido":
+                console.log("Cambiando el cuerpo del post")
+                setPost({
+                    ...post,
+                    contenido: e.target.value
+                })
+                break;
+            default:
+                break;
+        }
+    }
+
+    //Función que coloca el valor de los inputs al arreglo galerías:
+    const handleInputChangeGallery = (e) => {
+        galeria[e.target.name] = e.target.value;
+        setPost({
+            ...post,
+            galeria: galeria
+        })
+    };
+
+    async function handlePut(e){
+        console.log(post)
+        try {
+            const opciones = {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json' // Tipo de contenido que se está enviando (en este caso JSON)
+                },
+                body: JSON.stringify(post)
+            }
+
+            if(cat === 'art'){
+                let response = await fetch("https://plasticoapi.onrender.com/artistic", opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post artístico actualizado con éxito.")
+            }
+            else if(cat === 'com'){
+                let response = await fetch("https://plasticoapi.onrender.com/comercial", opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post comercial actualizado con éxito.")
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return(
         <div className="editList-content">
@@ -62,6 +156,7 @@ export default function EditForm (){
                 className="form-input"
                 name="titulo"
                 value={post.titulo}
+                onChange={handleInput}
                 />
 
                 <h3 className="form-label">Subtítulo</h3>
@@ -71,6 +166,7 @@ export default function EditForm (){
                 className="form-input"
                 name="subtitulo"
                 value={post.subtitulo}
+                onChange={handleInput}
                 />
 
                 <h3 className="form-label">Portada</h3>
@@ -79,6 +175,7 @@ export default function EditForm (){
                 className="form-input"
                 name="imagen"
                 value={post.imagen}
+                onChange={handleInput}
                 
                 />
                 {
@@ -97,6 +194,7 @@ export default function EditForm (){
                 className="form-input"
                 name="contenido"
                 value={post.contenido}
+                onChange={handleInput}
                 />
 
                 <div className="galeria-content">
@@ -107,13 +205,14 @@ export default function EditForm (){
                             type="text"
                             className="form-input"
                             value={image}
+                            name={index}
                             placeholder="URL de la imagen"
-                            
+                            onChange={handleInputChangeGallery}    
                         />
-                        <button className="galeria-button-men">✖</button>
+                        <button className="galeria-button-men" value={index} onClick={handleRemoveInputGallery}>✖</button>
                     </div>
                     ))}
-                    <button className="galeria-button-mas" >✚</button>
+                    <button className="galeria-button-mas" onClick={handleAddInputGallery}>✚</button>
                     <div className="thumbnail-content">
                     {post.galeria && post.galeria.map((image, index) => (
                         <img className="thumbnail" src={image} alt="URL INVALIDA. Al colocar una URL válida la imagen aparecerá aquí." />
