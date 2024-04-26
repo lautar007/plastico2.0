@@ -4,6 +4,9 @@ import '../styles/EditList.css';
 
 export default function EditForm (){
 
+    //Autorización:
+    const staffAutho = sessionStorage.getItem("staffAutho");
+
     //Dentro de los parámetros viene tanto el id como la categoría a la que pertenece el posteo. 
     //Es importante porque los trabajos artísticos y comerciales corresponden a modelos distintos en la DB.
     const {_id} = useParams();
@@ -49,6 +52,12 @@ export default function EditForm (){
     }, []);
 
     let galeria = post.galeria;
+
+    // Redireccionamiento en caso de no autorización.
+    if (staffAutho !== 'Y') {
+        window.location.href = "/admin";
+        return null; // No renderizar nada más
+    }
 
     //Función para agregar un nuevo input al formulario de galería: 
     const handleAddInputGallery = (e) => {
@@ -220,7 +229,7 @@ export default function EditForm (){
                     </div>
                 </div>
 
-                <button className="send-button" onClick={handlePut}>Postear.</button>
+                <button className="send-button" onClick={handlePut}>Editar.</button>
             </div>
         </div>
     )

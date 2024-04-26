@@ -40,3 +40,18 @@ El sitio web 2.0 tiene un mapa tal que así:
 
 
 La tipografía utilizada para los títulos principales (Artístico y Comercial) es: 
+
+
+
+
+{
+    "titulo": "Trabajo artístico de ejemplo",
+    "fecha": "24/03/2024",
+    "imagen": "https://i.pinimg.com/564x/3e/74/89/3e7489a038bb6747ed2a4e7e6c0c8560.jpg",
+    "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "categoria": ["moda", "retratos", "ropa", "arte"],
+    "subtitulo": "Subtítulo de prueba",
+    "galeria": ["https://i.pinimg.com/564x/aa/ad/22/aaad22bf99a5e34a85d491f8a520a304.jpg", "https://i.pinimg.com/564x/06/e1/a2/06e1a2bf5c2b1213c99fe535fb095cd5.jpg"]
+}
+
+https://plasticoapi.onrender.com

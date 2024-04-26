@@ -89,11 +89,11 @@ export default function EditPosts(){
                     <label className="tipo-label">Blog</label>
                 </div>
             </div>
-            <div>
+            <div className="list-direction">
                 {
                     postList.map(el=>{
                         return(
-                            <div>
+                            <div className="list-item">
                                 <hr/>
                                 <h2 className="edit-post-title">{el.titulo}</h2>
                                 <div className="img-botonera-div">

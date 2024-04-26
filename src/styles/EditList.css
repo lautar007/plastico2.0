@@ -79,3 +79,75 @@
         padding-bottom: 1vh;
     }
 }
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .editList-content{
+        background-color: rgb(30, 0, 0);
+    }
+    .editList-title{
+        color: white;
+        margin: 0;
+        font-family: 'Ageo-regular';
+        padding: 2vh;
+    }
+    .cat-check-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 2vh;
+    }
+    .category-checkbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-direction{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .list-item{
+        flex: 1 0 calc(33.33vw - 10px); /* Tres elementos por fila */
+    }
+
+    .edit-post-title{
+        color:white;
+        font-family: "Infinity";
+        font-size: 2.5vh;
+        padding-left: 2vh;
+        text-align: center;
+        height: 6vh;
+    }
+    .img-botonera-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .edit-post-img{
+        height: 18vh;
+        width: 18vh;
+        object-fit: cover;
+        margin-bottom: 2vh;
+        border: solid thin #CA2E28;
+    }
+    .botonera-div{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vh;
+    }
+    .edit-button{
+        margin: auto;
+        width: 15vw;
+        color: white;
+        background-color: black;
+        border: solid thin #CA2E28;
+        border-radius: 15px;
+        font-family: 'Ageo-regular';
+        font-size: 3vh;
+        padding-bottom: 1vh;
+    }
+}

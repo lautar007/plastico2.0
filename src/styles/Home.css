@@ -16,6 +16,9 @@
 
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
 
+html{
+    background-color: rgb(20, 0, 0);
+}
 
 @media (max-width: 499px){
     hr{
