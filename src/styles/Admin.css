@@ -21,6 +21,7 @@
         margin: 0;
         padding: 2vh 5vw;
         font-family: 'Ageo-regular';
+        font-size: 4vh;
     }
     .pass-content{
         display: flex;
@@ -96,6 +97,7 @@
         color: white;
         font-family: "Ageo-regular";
         margin: 1vh 2vh;
+        font-size: 3vh;
     }
     .form-input{
         margin: 0 2vh;

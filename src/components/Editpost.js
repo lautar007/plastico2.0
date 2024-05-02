@@ -55,6 +55,39 @@ export default function EditPosts(){
         console.log(category);
     };
 
+    //Función para eliminar posts: 
+    async function handleDeletePost(e){
+        try {
+            if(category === "art"){
+                let opciones = {
+                    method: 'DELETE', // Método de la solicitud
+                };
+                let response = await fetch(`https://plasticoapi.onrender.com/artistic/${e.target.name}`, opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post artístico eliminado con éxito.") 
+            }
+            else if(category === "com"){
+                let opciones = {
+                    method: 'DELETE', // Método de la solicitud
+                };
+                let response = await fetch(`https://plasticoapi.onrender.com/comercial/${e.target.name}`, opciones)
+                if (!response.ok){
+                    alert("Hubo un error. Llamen a Lauchita!")
+                    throw new Error("Error al enviar la solicitud POST")
+                }
+                else alert("Post comercial eliminado con éxito.") 
+            }
+            //Recargar la página luego de eliminar.
+            window.location.reload()
+        } catch (error) {
+            alert("Hubo un error. LLamen a Lauchita");
+            console.log(error);
+        }
+    }
+
     return(
         <div className="editList-content">
             <h1 className="editList-title">Lista de Publicaciones:</h1>
@@ -99,7 +132,13 @@ export default function EditPosts(){
                                 <div className="img-botonera-div">
                                     <img className="edit-post-img" alt={el._id} src={el.imagen}/>
                                     <div className="botonera-div">
-                                        <button className="edit-button">Eliminar</button>
+                                        <button 
+                                        className="edit-button"
+                                        name={el._id}
+                                        onClick={handleDeletePost}
+                                        >
+                                            Eliminar
+                                        </button>
                                         <Link to={"/editForm/"+ el._id + "-" + category}>
                                             <button className="edit-button">Editar</button>
                                         </Link>

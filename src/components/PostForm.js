@@ -76,13 +76,6 @@ export default function PostForm(){
             })
             console.log(newPost)
         }
-        else if(e.target.name === "fecha"){
-            setNewPost({
-                ...newPost,
-                fecha: e.target.value
-            })
-            console.log(newPost)
-        }
         else if(e.target.name === "imagen"){
             setNewPost({
                 ...newPost,
@@ -205,14 +198,6 @@ export default function PostForm(){
                             placeholder="Subtítulo del post"
                             className="form-input"
                             name="subtitulo"
-                            onChange={handleNewPost}
-                            />
-
-                            <h3 className="form-label">Fecha</h3>
-                            <input
-                            type="date"
-                            className="form-input"
-                            name="fecha"
                             onChange={handleNewPost}
                             />
 

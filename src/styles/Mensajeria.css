@@ -1,0 +1,115 @@
+/* Fuentes */
+@font-face{
+    font-family: 'Ageo-light';
+    src:url('../fonts/AgeoTrial-Light.ttf')
+}
+
+@font-face{
+    font-family: 'Ageo-regular';
+    src:url('../fonts/AgeoTrial-Regular.ttf')
+}
+
+@font-face{
+    font-family: 'Just-sans';
+    src:url('../fonts/JUST\ Sans\ Regular.otf')
+}
+
+/* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
+
+@media (max-width: 499px){
+    .mensj-card{
+        display: flex;
+        flex-direction: column;
+        border-top: solid 1vh #CA2E28;
+    }
+    .mensj-title{
+        color: white;
+        background-color: rgb(50,0,0);
+        padding: 1vh 2vh;
+        margin: 0;
+        font-family: "Just-sans";
+        font-size: 3vh;
+    }
+    .mensj-author{
+        color: white;
+        background-color: rgb(50,0,0);
+        padding: 0 0vh 1vh 2vh;
+        margin: 0;
+        font-family: "Just-sans";
+        font-size: 2.3vh;
+    }
+    .mensj-body{
+        color: white;
+        font-family: "Just-sans";
+        font-size: 2.5vh;
+        padding: 0 0vh 2vh 2vh;
+        margin-bottom: 0;
+    }
+    .mensj-button{
+        width: 25vw;
+        color: white;
+        background-color: black;
+        border: solid thin #CA2E28;
+        border-radius: 15px;
+        font-family: 'Ageo-regular';
+        font-size: 6vw;
+        padding-bottom: 1vh;
+        margin: 0 0vh 2vh 2vh;
+    }
+}
+
+/* FIN de los estilos para pantalla de móvil (menos de 400px de ancho) */
+/* Comienzo de los estilos para pantalla de escritorio (más de 400px de ancho) */
+
+@media (min-width: 499px){
+    .mensj-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .mensj-card{
+        display: flex;
+        flex-direction: column;
+        border-top: solid 1vh #CA2E28;
+        flex: 1 0 calc(33.33vw - 10px); /* Tres elementos por fila */
+        max-height: 50vh;
+        max-width: 33.33vw;
+        margin-bottom: 3vh;
+    }
+    .mensj-title{
+        color: white;
+        background-color: rgb(50,0,0);
+        padding: 1vh 2vh;
+        margin: 0;
+        font-family: "Just-sans";
+        font-size: 3vh;
+    }
+    .mensj-author{
+        color: white;
+        background-color: rgb(50,0,0);
+        padding: 0 0vh 1vh 2vh;
+        margin: 0;
+        font-family: "Just-sans";
+        font-size: 2.3vh;
+    }
+    .mensj-body{
+        color: white;
+        font-family: "Just-sans";
+        font-size: 2.5vh;
+        padding: 0 0vh 2vh 2vh;
+        margin-bottom: 0;
+        min-height: 15vh;
+    }
+    .mensj-button{
+        width: 12vw;
+        color: white;
+        background-color: black;
+        border: solid thin #CA2E28;
+        border-radius: 15px;
+        font-family: 'Ageo-regular';
+        font-size: 4vh;
+        padding-bottom: 1vh;
+        margin: 0 auto;
+    }
+}

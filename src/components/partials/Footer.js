@@ -37,15 +37,15 @@ export default function Footer (){
                 </div>
                 <hr className="hr-footer"/>
                 <div>
-                    <Link className="link">
+                    <Link className="link" to="/sendMsg">
                         <p className="message-label">Dejanos un mensaje</p>
                     </Link>
                 </div>
                 <hr className="hr-footer"/>
             </div>
                 <div className="credits-content">
-                    <Link className="link">
-                        <p className="credits"> 🡺 Mapa del sitio.</p>
+                    <Link className="link" to="/admin">
+                        <p className="credits"> 🡺 Administración.</p>
                     </Link>
                     <p className="credits">Este sitio fue diseñado y desarrollado por Lautaro Nuñez.</p>
                     <p className="credits">Si quieres que desarrolle tu web, envía un email a 'kautarol@gmail.com'.</p>
