@@ -8,10 +8,22 @@ import { useState } from "react";
 export default function Navbar (){
 
     const [menu, setMenu] = useState(false);
+    const [search, setSearch] = useState('');
 
     function handleMenu(e){
         e.preventDefault();
         setMenu(!menu)
+    }
+
+    function handleSearchBar (e){
+        setSearch(e.target.value);
+    }
+
+    function handleEnterPress(e){
+        if(e.key === "Enter"){
+            console.log("se presionó Enter")
+            window.location.href = '/search/' + search;
+        }
     }
 
     return(
@@ -33,7 +45,12 @@ export default function Navbar (){
                     </div>
                     : null
                 }
-                <input className="searchBar" placeholder=" ⌕ Buscar..."/>
+                <input 
+                className="searchBar" 
+                placeholder=" ⌕ Buscar..."
+                onChange={handleSearchBar}
+                onKeyDown={handleEnterPress}
+                />
             </div>
         </div>
     )

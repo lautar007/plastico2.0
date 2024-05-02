@@ -14,6 +14,21 @@
     src:url('../fonts/BigersideExpanded-7O9Z4.otf')
 }
 
+/* Animaciones*/
+@keyframes loading {
+    0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+  
+    50% {
+      transform: perspective(120px) rotateX(180deg) rotateY(0deg);
+    }
+  
+    100% {
+      transform: perspective(120px) rotateX(180deg) rotateY(-180deg);
+    }
+  }
+
 /* Comienzo de los estilos para pantalla de móvil (menos de 400px de ancho) */
 
 html{
@@ -38,9 +53,19 @@ html{
         font-family: 'Ageo-light';
         margin: 0 0 1vh 1vw;
     }
+    .loading-anim{
+        position: absolute;
+        background-color: #CA2E28;
+        width: 10vh;
+        height: 10vh;
+        left: 20vh;
+        top: 10vh;
+        animation: loading 2s infinite ease-in-out;
+    }
     .art-content{
         position: relative;
         height: 33vh;
+        background-color: rgb(20, 0, 0);
     }
     .category-labelA{
         position: absolute;
@@ -77,6 +102,7 @@ html{
     .com-content{
         position: relative;
         height: 33vh;
+        background-color: rgb(20, 0, 0);
     }
     .posterComercial{
         position: relative;
@@ -165,9 +191,20 @@ html{
         color: white;
         font-family: 'Ageo-light';
     }
+    .loading-anim{
+        position: absolute;
+        background-color: #CA2E28;
+        width: 15vh;
+        height: 15vh;
+        left: 20vw;
+        top: 25vh;
+        animation: loading 2s infinite ease-in-out;
+    }
     .art-content{
         position: relative;
+        min-width: 49vw;
         height: 80vh;
+        background-color: rgb(20, 0, 0);
     }
     .category-labelA{
         position: absolute;
@@ -203,6 +240,8 @@ html{
     .com-content{
         position: relative;
         height: 80vh;
+        min-width: 48vw;
+        background-color: rgb(20, 0, 0);
     }
     .posterComercial{
         position: relative;

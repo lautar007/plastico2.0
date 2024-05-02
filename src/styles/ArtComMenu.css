@@ -83,8 +83,7 @@
         opacity: 0%;
         object-fit: cover;
         vertical-align: top;
-        animation: animatedIMG 3s ease forwards;
-        animation-delay: 3s;
+        animation: animatedIMG 1s ease forwards;
     }
     .post-title{
         position: absolute;
@@ -141,14 +140,13 @@
         position: relative;
     }
     .post-img{
-        margin:0;
+        margin: 0;
         width: 30vw;
         height: 40vh;
         opacity: 0%;
         object-fit: cover;
         vertical-align: top;
         animation: animatedIMG 3s ease forwards;
-        animation-delay: 3s;
     }
     .post-title{
         position: absolute;

@@ -32,7 +32,7 @@ export default function PostDetailArt(){
            <h1 className="detail-title">{post.titulo}</h1>
            <div className="detail-content">
                 <img className="detail-image" src={post.imagen} alt="detail-img"/>
-                <div>
+                <div className="detail-body-cont">
                     <h1 className="detail-subtitle">{post.subtitulo}</h1>
                     <p className="detail-body">{post.contenido}</p>
                     <p className="detail-date">{post.fecha}</p>

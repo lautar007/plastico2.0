@@ -29,6 +29,9 @@
         object-fit: cover;
         vertical-align: top;
     }
+    .detail-body-cont{
+        background-color: white;
+    }
     .detail-subtitle{
         background-color: black;
         color: white;
@@ -93,6 +96,9 @@
         vertical-align: top;
         border: solid 1vw black;
     }
+    .detail-body-cont{
+        background-color: white;
+    }
     .detail-subtitle{
         background-color: black;
         color: white;
@@ -128,7 +134,7 @@
         height: fit-content;
         object-fit: cover;
         vertical-align: top;
-        border: solid 1vh black;
+        border: solid 1vh #9c1611;
     }
     .detail-galhr{
         display: none;

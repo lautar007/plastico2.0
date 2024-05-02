@@ -29,6 +29,7 @@ export default function Home (){
         fetchPoster();
     }, []);
 
+
     return(
         <div className="Home">
             <h1 className="titulo">Plástico.</h1>
@@ -37,19 +38,35 @@ export default function Home (){
             <hr/>
             <div className="position-posters">
                 <div className="art-content">
-                    <img className="posterArtistico" src={posterA} alt="portada artistico"/>
-                    <img className="shadeIzq" src={shadeIzq} alt="shade"></img>
-                    <Link className="link" to="/artistico">
-                        <p className="category-labelA">Art<br/>ist<br/>ico</p>
-                    </Link>
+                    {
+                        posterA ?
+                        <div>
+                            <img className="posterArtistico" src={posterA} alt="portada artistico" />
+                            <img className="shadeIzq" src={shadeIzq} alt="shade"></img>
+                            <Link className="link" to="/artistico">
+                                <p className="category-labelA">Art<br />ist<br />ico</p>
+                            </Link>
+                        </div>
+                        :
+                        <div className="loading-anim"></div>
+                    }
+                    
                 </div>
                 <hr className="division-hr"/>
                 <div className="com-content">
-                    <img className="posterComercial" src={posterB} alt="portada artistico"/>
-                    <img className="shadeDer" src={shadeDer} alt="shade"></img>
-                    <Link className="link" to= "/comercial">
-                        <p className="category-labelB">Com<br/>erc<br/>ial</p>
-                    </Link>
+                    {
+                        posterB ? 
+                        <div>
+                            <img className="posterComercial" src={posterB} alt="portada artistico" />
+                            <img className="shadeDer" src={shadeDer} alt="shade"></img>
+                            <Link className="link" to="/comercial">
+                                <p className="category-labelB">Com<br />erc<br />ial</p>
+                            </Link>
+                        </div>
+                        :
+                        <div className="loading-anim"></div>
+                    }
+                    
                 </div>
             </div>
         </div>
